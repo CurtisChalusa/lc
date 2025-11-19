@@ -1,0 +1,45 @@
+<nav class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+
+      <!-- Brand -->
+      <a href="index.html" class="font-bold text-xl tracking-tight">Lucky Chalusa</a>
+
+      <!-- Mobile Button -->
+      <button id="menuBtn" class="md:hidden p-2 border rounded">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Desktop Menu -->
+      <div id="menu" class="hidden md:flex space-x-6 font-medium">
+        <a href="index.html" class="hover:text-cyan-600">Home</a>
+        <a href="about.html" class="hover:text-cyan-600">About</a>
+        <a href="services.html" class="hover:text-cyan-600">Services</a>
+        <a href="portfolio.html" class="hover:text-cyan-600">Portfolio</a>
+        <a href="experience.html" class="hover:text-cyan-600">Experience</a>
+        <a href="contact.html" class="hover:text-cyan-600">Contact</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 font-medium">
+    <a href="index.html" class="block py-2 border-b">Home</a>
+    <a href="about.html" class="block py-2 border-b">About</a>
+    <a href="services.html" class="block py-2 border-b">Services</a>
+    <a href="portfolio.html" class="block py-2 border-b">Portfolio</a>
+    <a href="experience.html" class="block py-2 border-b">Experience</a>
+    <a href="contact.html" class="block py-2">Contact</a>
+  </div>
+
+  <script>
+    document.getElementById('menuBtn').onclick = function () {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    };
+  </script>
+</nav>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lucky Chalusa — ICT & Digital Media Professional</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- NAVBAR INCLUDE -->
+  <div id="navbar"></div>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
+
+  <!-- HERO SECTION -->
+  <section class="bg-gradient-to-r from-slate-900 to-cyan-700 text-white py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            ICT & Digital Media Professional
+          </h1>
+
+          <p class="mt-4 text-lg md:text-xl opacity-90">
+            Delivering innovative digital solutions through ICT systems, software development,
+            digital media, and technical training.
+          </p>
+
+          <div class="mt-6 flex space-x-4">
+            <a href="portfolio.html"
+              class="bg-white text-gray-900 px-6 py-3 rounded shadow font-medium hover:bg-gray-100">
+              View Portfolio
+            </a>
+
+            <a href="contact.html"
+              class="bg-cyan-600 px-6 py-3 rounded shadow font-medium hover:bg-cyan-500">
+              Contact Me
+            </a>
+          </div>
+
+          <div class="mt-10 grid grid-cols-3 gap-6 text-center">
+            <div>
+              <p class="text-3xl font-bold">7+</p>
+              <p class="text-sm opacity-80">Years Experience</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold">30+</p>
+              <p class="text-sm opacity-80">Training Programs</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold">15+</p>
+              <p class="text-sm opacity-80">Digital Projects</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden md:block">
+          <img src="assets/lucky.jpg" class="rounded-xl shadow-xl border border-white/20" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 tracking-tight">Core Services</h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition border-t-4 border-cyan-600">
+          <h3 class="font-bold text-lg mb-2">Web & Software Development</h3>
+          <p class="text-sm opacity-80">
+            Full-stack development, custom business systems, automation, and modern web apps.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition border-t-4 border-blue-600">
+          <h3 class="font-bold text-lg mb-2">ICT Systems & Networking</h3>
+          <p class="text-sm opacity-80">
+            LAN/WAN setup, hardware & software support, systems administration, and security.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition border-t-4 border-emerald-600">
+          <h3 class="font-bold text-lg mb-2">Technical Training & Digital Skills</h3>
+          <p class="text-sm opacity-80">
+            Digital literacy, ICT training, manuals, visual learning materials, and reports.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER INCLUDE -->
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+</body>
+
+</html>

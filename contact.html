@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Lucky Chalusa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- NAVBAR INCLUDE -->
+  <div id="navbar"></div>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
+
+  <!-- HERO / HEADER SECTION -->
+  <section class="bg-gradient-to-r from-slate-900 to-cyan-700 text-white py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold">Get in Touch</h1>
+      <p class="mt-4 text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
+        Whether you want to discuss a project, request a service, or just say hello, I’m always open to
+        connecting with professionals, businesses, and enthusiasts.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM & DETAILS -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+
+      <!-- Contact Form -->
+      <div class="bg-white p-8 rounded-xl shadow">
+        <h2 class="text-3xl font-bold mb-6">Send a Message</h2>
+        <form action="https://formsubmit.co/chalusa.lucky@gmail.com" method="POST" class="space-y-4">
+          <!-- Prevent spam submissions -->
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Redirect after submission -->
+          <input type="hidden" name="_next" value="https://curtischalusa.github.io/thank-you.html">
+          <!-- Optional: custom email subject -->
+          <input type="hidden" name="_subject" value="New message from Portfolio Contact Form">
+
+          <div>
+            <label class="block text-sm font-medium mb-1">Name</label>
+            <input type="text" name="name" required
+              class="w-full px-4 py-2 rounded border border-gray-300 focus:ring-2 focus:ring-cyan-600 focus:outline-none">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1">Email</label>
+            <input type="email" name="email" required
+              class="w-full px-4 py-2 rounded border border-gray-300 focus:ring-2 focus:ring-cyan-600 focus:outline-none">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1">Subject</label>
+            <input type="text" name="subject"
+              class="w-full px-4 py-2 rounded border border-gray-300 focus:ring-2 focus:ring-cyan-600 focus:outline-none">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1">Message</label>
+            <textarea name="message" rows="5" required
+              class="w-full px-4 py-2 rounded border border-gray-300 focus:ring-2 focus:ring-cyan-600 focus:outline-none"></textarea>
+          </div>
+
+          <button type="submit"
+            class="bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-3 rounded shadow font-medium mt-2">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="space-y-6">
+        <h2 class="text-3xl font-bold mb-4">Contact Information</h2>
+        <div>
+          <p class="font-medium">Email:</p>
+          <p class="opacity-90"><a href="mailto:chalusa.lucky@gmail.com" class="text-cyan-600 hover:underline">chalusa.lucky@gmail.com</a></p>
+        </div>
+        <div>
+          <p class="font-medium">Phone:</p>
+          <p class="opacity-90"><a href="tel:+265997112392" class="text-cyan-600 hover:underline">+265 997 112 392</a> / <a href="tel:+265888003600" class="text-cyan-600 hover:underline">+265 888 003 600</a></p>
+        </div>
+        <div>
+          <p class="font-medium">Location:</p>
+          <p class="opacity-90">Blantyre, Malawi</p>
+        </div>
+        <div>
+          <p class="font-medium">Portfolio:</p>
+          <p class="opacity-90"><a href="https://curtischalusa.github.io/lc/" class="text-cyan-600 hover:underline">https://curtischalusa.github.io/lc/</a></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CALL-TO-ACTION SECTION -->
+  <section class="py-16 bg-gradient-to-r from-cyan-700 to-slate-900 text-white text-center">
+    <h2 class="text-3xl font-bold mb-4">Have a Project in Mind?</h2>
+    <p class="mb-6 opacity-90 max-w-xl mx-auto">
+      Reach out and let's discuss how I can help you achieve your digital goals.
+    </p>
+    <a href="https://formsubmit.co/chalusa.lucky@gmail.com"
+       class="bg-white text-gray-900 px-8 py-3 rounded shadow font-medium hover:bg-gray-100">
+      Email Me
+    </a>
+  </section>
+
+  <!-- FOOTER INCLUDE -->
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+</body>
+</html>

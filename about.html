@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Lucky Chalusa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- NAVBAR INCLUDE -->
+  <div id="navbar"></div>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
+
+  <!-- HEADER -->
+  <section class="bg-gradient-to-r from-slate-900 to-cyan-700 text-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold">About Me</h1>
+      <p class="mt-4 text-lg opacity-90 max-w-2xl">
+        A passionate ICT Professional dedicated to creating digital solutions, enabling smarter
+        systems, and empowering people through technology and training.
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+
+      <!-- Photo -->
+      <div class="flex justify-center md:justify-start">
+        <img src="assets/lucky.jpg"
+          class="rounded-xl shadow-xl border border-gray-300 w-80 md:w-96">
+      </div>
+
+      <!-- Bio -->
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Who I Am</h2>
+
+        <p class="leading-relaxed opacity-90 mb-6">
+          I am an ICT and Digital Media specialist with extensive experience in system support,
+          networking, software development, and digital training. My goal is to use technology
+          to solve real problems, enhance business operations, and equip people with practical
+          digital skills that improve productivity and opportunities.
+        </p>
+
+        <p class="leading-relaxed opacity-90">
+          Over the years, I have worked with companies, institutions, and individuals to deliver
+          impactful digital solutions. Beyond ICT, I am passionate about youth empowerment,
+          digital transformation, and creating tools that simplify work.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-10">Technical Competencies</h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="p-6 rounded-xl shadow hover:shadow-lg transition bg-gray-50 border-t-4 border-cyan-700">
+          <h3 class="font-bold text-lg mb-2">Software Development</h3>
+          <p class="text-sm opacity-80">
+            Web apps, system automation, database integration, API development.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl shadow hover:shadow-lg transition bg-gray-50 border-t-4 border-blue-700">
+          <h3 class="font-bold text-lg mb-2">ICT Systems & Networking</h3>
+          <p class="text-sm opacity-80">
+            Systems support, LAN/WAN configuration, troubleshooting, security.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl shadow hover:shadow-lg transition bg-gray-50 border-t-4 border-emerald-700">
+          <h3 class="font-bold text-lg mb-2">Digital Training</h3>
+          <p class="text-sm opacity-80">
+            ICT capacity building, digital literacy, manual creation, e-learning support.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl shadow hover:shadow-lg transition bg-gray-50 border-t-4 border-indigo-700">
+          <h3 class="font-bold text-lg mb-2">Digital Media & Design</h3>
+          <p class="text-sm opacity-80">
+            Video editing, photography, creative content, digital storytelling.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl shadow hover:shadow-lg transition bg-gray-50 border-t-4 border-purple-700">
+          <h3 class="font-bold text-lg mb-2">Tech Support & Maintenance</h3>
+          <p class="text-sm opacity-80">
+            Hardware/software support, diagnostics, upgrades, system restoration.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl shadow hover:shadow-lg transition bg-gray-50 border-t-4 border-red-600">
+          <h3 class="font-bold text-lg mb-2">Data Management</h3>
+          <p class="text-sm opacity-80">
+            Database support, data entry systems, reporting tools & dashboards.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE / HIGHLIGHTS -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8">Professional Highlights</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white p-6 rounded-xl shadow border-l-4 border-cyan-600">
+          <h3 class="font-bold text-lg">7+ Years Experience</h3>
+          <p class="text-sm mt-2 opacity-80">Cross-cutting experience in ICT systems and digital media.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow border-l-4 border-blue-600">
+          <h3 class="font-bold text-lg">30+ Trainings Delivered</h3>
+          <p class="text-sm mt-2 opacity-80">Technical capacity-building across various organisations.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow border-l-4 border-emerald-600">
+          <h3 class="font-bold text-lg">15+ Digital Products</h3>
+          <p class="text-sm mt-2 opacity-80">Websites, systems, multimedia content & ICT solutions.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER INCLUDE -->
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+</body>
+</html>
