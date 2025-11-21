@@ -13,10 +13,23 @@
   <!-- NAVBAR INCLUDE -->
   <div id="navbar"></div>
   <script>
-    fetch("navbar.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("navbar").innerHTML = data);
-  </script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+
+      // Re-attach menu button functionality AFTER navbar loads
+      const btn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (btn && mobileMenu) {
+        btn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    });
+</script>
+
 
   <!-- HERO SECTION -->
   <section class="bg-gradient-to-r from-slate-900 to-cyan-700 text-white py-16">

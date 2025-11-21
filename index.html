@@ -15,7 +15,19 @@
   <script>
     fetch("navbar.html")
       .then(res => res.text())
-      .then(data => document.getElementById("navbar").innerHTML = data);
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // Enable mobile menu toggle AFTER navbar loads
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (menuBtn && mobileMenu) {
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      });
   </script>
 
   <!-- HERO SECTION -->

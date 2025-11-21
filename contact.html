@@ -12,19 +12,31 @@
 
   <!-- NAVBAR INCLUDE -->
   <div id="navbar"></div>
-  <script>
-    fetch("navbar.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("navbar").innerHTML = data);
-  </script>
+ <script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+
+      // Re-attach menu button functionality AFTER navbar loads
+      const btn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (btn && mobileMenu) {
+        btn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    });
+</script>
+
 
   <!-- HERO / HEADER SECTION -->
   <section class="bg-gradient-to-r from-slate-900 to-cyan-700 text-white py-16">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <h1 class="text-4xl md:text-5xl font-extrabold">Get in Touch</h1>
       <p class="mt-4 text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-        Whether you want to discuss a project, request a service, or just say hello, I’m always open to
-        connecting with professionals, businesses, and enthusiasts.
+        Whether you want to discuss a project, request a service, or simply make an inquiry, I am available to assist.
       </p>
     </div>
   </section>
@@ -37,11 +49,14 @@
       <div class="bg-white p-8 rounded-xl shadow">
         <h2 class="text-3xl font-bold mb-6">Send a Message</h2>
         <form action="https://formsubmit.co/chalusa.lucky@gmail.com" method="POST" class="space-y-4">
-          <!-- Prevent spam submissions -->
+
+          <!-- Prevent spam -->
           <input type="hidden" name="_captcha" value="false">
+
           <!-- Redirect after submission -->
-          <input type="hidden" name="_next" value="https://curtischalusa.github.io/lc/thank-you.html">
-          <!-- Optional: custom email subject -->
+          <input type="hidden" name="_next" value="https://curtischalusa.github.io/thank-you.html">
+
+          <!-- Custom email subject -->
           <input type="hidden" name="_subject" value="New message from Portfolio Contact Form">
 
           <div>
@@ -78,22 +93,38 @@
       <!-- Contact Details -->
       <div class="space-y-6">
         <h2 class="text-3xl font-bold mb-4">Contact Information</h2>
+
         <div>
           <p class="font-medium">Email:</p>
-          <p class="opacity-90"><a href="mailto:chalusa.lucky@gmail.com" class="text-cyan-600 hover:underline">chalusa.lucky@gmail.com</a></p>
+          <p class="opacity-90">
+            <a href="mailto:chalusa.lucky@gmail.com" class="text-cyan-600 hover:underline">
+              chalusa.lucky@gmail.com
+            </a>
+          </p>
         </div>
+
         <div>
           <p class="font-medium">Phone:</p>
-          <p class="opacity-90"><a href="tel:+265997112392" class="text-cyan-600 hover:underline">+265 997 112 392</a> / <a href="tel:+265888003600" class="text-cyan-600 hover:underline">+265 888 003 600</a></p>
+          <p class="opacity-90">
+            <a href="tel:+265997112392" class="text-cyan-600 hover:underline">+265 997 112 392</a> /
+            <a href="tel:+265888003600" class="text-cyan-600 hover:underline">+265 888 003 600</a>
+          </p>
         </div>
+
         <div>
           <p class="font-medium">Location:</p>
           <p class="opacity-90">Blantyre, Malawi</p>
         </div>
+
         <div>
           <p class="font-medium">Portfolio:</p>
-          <p class="opacity-90"><a href="https://curtischalusa.github.io/lc/" class="text-cyan-600 hover:underline">https://curtischalusa.github.io/lc/</a></p>
+          <p class="opacity-90">
+            <a href="https://curtischalusa.github.io/lc/" class="text-cyan-600 hover:underline">
+              https://curtischalusa.github.io/lc/
+            </a>
+          </p>
         </div>
+
       </div>
 
     </div>
@@ -103,9 +134,9 @@
   <section class="py-16 bg-gradient-to-r from-cyan-700 to-slate-900 text-white text-center">
     <h2 class="text-3xl font-bold mb-4">Have a Project in Mind?</h2>
     <p class="mb-6 opacity-90 max-w-xl mx-auto">
-      Reach out and let's discuss how I can help you achieve your digital goals.
+      Reach out and let us explore how your digital objectives can be achieved.
     </p>
-    <a href="https://formsubmit.co/chalusa.lucky@gmail.com"
+    <a href="mailto:chalusa.lucky@gmail.com"
        class="bg-white text-gray-900 px-8 py-3 rounded shadow font-medium hover:bg-gray-100">
       Email Me
     </a>

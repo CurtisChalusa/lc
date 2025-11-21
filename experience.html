@@ -31,12 +31,25 @@
 <body class="bg-gray-100 text-gray-800">
 
   <!-- NAVBAR INCLUDE -->
-  <div id="navbar"></div>
+ <div id="navbar"></div>
   <script>
     fetch("navbar.html")
       .then(res => res.text())
-      .then(data => document.getElementById("navbar").innerHTML = data);
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // Enable mobile menu toggle AFTER navbar loads
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (menuBtn && mobileMenu) {
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      });
   </script>
+
 
   <!-- HERO SECTION -->
   <section class="bg-gradient-to-r from-slate-900 to-cyan-700 text-white py-16">
